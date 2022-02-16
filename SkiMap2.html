@@ -133,38 +133,38 @@ Nordic Ski Map for GTA
               graphicsLayer.add(pointGraphic2);
 
 
+              //Made a polygon heart but I don't like it. So I'm leaving it out, but leaving the code, because I did it. 
+              // // Create a polygon geometry HEART
+              // const polygon = {
+              //     type: "polygon",
+              //     rings: [
+              //         [-80.818993, 44.177641], //Longitude, latitude 44.177641188319335, -80.81899374857429
+              //         [-80.554260, 44.261003], //Longitude, latitude 44.2610038370053, -80.5542609357485
+              //         [-80.571700, 43.998133], //Longitude, latitude 43.99813391662574, -80.57170064193967
+              //         [-80.741889, 43.844191],   //Longitude, latitude 43.84419153842094, -80.74188901151742
+              //         [-80.988073, 43.973037],  //Longitude, latitude 43.97303767243242, -80.9880736272536
+              //         [-81.234409, 44.216492]  //Longitude, latitude 44.2164922363365, -81.23440947720373
+              //     ]
+              // };
 
-              // Create a polygon geometry HEART
-              const polygon = {
-                  type: "polygon",
-                  rings: [
-                      [-80.818993, 44.177641], //Longitude, latitude 44.177641188319335, -80.81899374857429
-                      [-80.554260, 44.261003], //Longitude, latitude 44.2610038370053, -80.5542609357485
-                      [-80.571700, 43.998133], //Longitude, latitude 43.99813391662574, -80.57170064193967
-                      [-80.741889, 43.844191],   //Longitude, latitude 43.84419153842094, -80.74188901151742
-                      [-80.988073, 43.973037],  //Longitude, latitude 43.97303767243242, -80.9880736272536
-                      [-81.234409, 44.216492]  //Longitude, latitude 44.2164922363365, -81.23440947720373
-                  ]
-              };
+              // const simpleFillSymbol = {
+              //     type: "simple-fill",
+              //     color: [255, 192, 203, 0.8],  // Pink, opacity 80%
+              //     outline: {
+              //         color: [255, 255, 255],
+              //         width: 1
+              //     }
+              // };
 
-              const simpleFillSymbol = {
-                  type: "simple-fill",
-                  color: [255, 192, 203, 0.8],  // Pink, opacity 80%
-                  outline: {
-                      color: [255, 255, 255],
-                      width: 1
-                  }
-              };
+              // const polygonGraphic = new Graphic({
+              //     geometry: polygon,
+              //     symbol: simpleFillSymbol,
 
-              const polygonGraphic = new Graphic({
-                  geometry: polygon,
-                  symbol: simpleFillSymbol,
+              //     attributes: attributes,
 
-                  attributes: attributes,
-
-              });
-              graphicsLayer.add(polygonGraphic);
-              //End of Point and Polygon graphics
+              // });
+              // graphicsLayer.add(polygonGraphic);
+              // //End of Point and Polygon graphics
       });
       </script>
   
