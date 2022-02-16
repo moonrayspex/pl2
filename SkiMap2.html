@@ -95,7 +95,8 @@ Nordic Ski Map for GTA
           };
 
               //Popup for Point Feature
-              //So Frustrating. I want to add web-links in the pop-up, but I can't find a way without a whole other JS section.
+              //So Frustrating. I want to add web-links in the pop-up, but I can't find a way.  
+              //Does Esri not want external links in pop ups? Very frustrating for UX. 
           const popupTemplate = {
                   title: "{Name}",
                   content: "{Description}"
@@ -125,6 +126,7 @@ Nordic Ski Map for GTA
                Description:"Excellent" //<p><a href="https://www.hardwoodskiandbike.ca/">Hardwood Hills Details</a>  
               //             <br><a href="https://www.hardwoodskiandbike.ca/cross-country-ski-trail-maps/">Ski Trails Map</a></br>
               //             </p>
+              //I can't figure out how to get a web-link here and it's driving me nuts. 
               } 
           const pointGraphic2 = new Graphic({
               geometry: point2,
@@ -134,6 +136,59 @@ Nordic Ski Map for GTA
               });
               graphicsLayer.add(pointGraphic2);
 
+          //THIRD POINT
+          const point3 = { 
+              type: "point",
+              longitude: -80.107094,  
+              latitude: 43.939947
+          };
+          const attributes3 = {
+              Name: "Mono Nordic Ski Club",
+               Description:"Check conditions before heading out." 
+              } 
+          const pointGraphic3 = new Graphic({
+              geometry: point3,
+              symbol: simpleMarkerSymbol,
+              attributes: attributes3,
+              popupTemplate: popupTemplate
+              });
+              graphicsLayer.add(pointGraphic3);   
+          
+              //Fourth POINT
+          const point4 = { 
+              type: "point",
+              longitude: -80.032622,
+              latitude: 44.202573
+          };
+          const attributes4 = {
+              Name: "Mansfield Outdoor Centre",
+               Description:"Groomed" 
+              } 
+          const pointGraphic4 = new Graphic({
+              geometry: point4,
+              symbol: simpleMarkerSymbol,
+              attributes: attributes4,
+              popupTemplate: popupTemplate
+              });
+              graphicsLayer.add(pointGraphic4);  
+
+          //FIFTH POINT
+          const point5 = { 
+              type: "point",
+              longitude: -80.227021,  
+              latitude: 44.3820638
+          };
+          const attributes5 = {
+              Name: "Highlands Nordic Ski Centre",
+               Description:"Excellent groomed trails" 
+              } 
+          const pointGraphic5 = new Graphic({
+              geometry: point5,
+              symbol: simpleMarkerSymbol,
+              attributes: attributes5,
+              popupTemplate: popupTemplate
+              });
+              graphicsLayer.add(pointGraphic5);  
 
               //Made a polygon heart but I don't like it. So I'm leaving it out, but leaving the code, because I did it. 
               // // Create a polygon geometry HEART
