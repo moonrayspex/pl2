@@ -62,6 +62,14 @@ Nordic Ski Map for GTA
                   width: 1
                   }
           };
+          const simpleMarkerSymbol2 = {
+                  type: "simple-marker",
+                  color: [100, 149, 237],  // Cornflower Blue
+                  outline: {
+                  color: [255, 255, 255], // White
+                  width: 1
+                  }
+          };
 
               //Popup for Point Feature
           const popupTemplate = {
@@ -70,7 +78,7 @@ Nordic Ski Map for GTA
               }
           const attributes = {
                   Name: "Albion Hills Conservation Centre",
-                  Description: "Groomed Trails"
+                  Description: "Groomed Trails. https://trca.ca/activities/cross-country-skiing/"
               }
 
           const pointGraphic = new Graphic({
@@ -94,7 +102,7 @@ Nordic Ski Map for GTA
           } 
           const pointGraphic2 = new Graphic({
               geometry: point2,
-              symbol: simpleMarkerSymbol,
+              symbol: simpleMarkerSymbol2,
               attributes: attributes2,
               popupTemplate: popupTemplate
               });
@@ -106,11 +114,12 @@ Nordic Ski Map for GTA
               const polygon = {
                   type: "polygon",
                   rings: [
-                      [-118.818984489994, 34.0137559967283], //Longitude, latitude
-                      [-118.806796597377, 34.0215816298725], //Longitude, latitude
-                      [-118.791432890735, 34.0163883241613], //Longitude, latitude
-                      [-118.79596686535, 34.008564864635],   //Longitude, latitude
-                      [-118.808558110679, 34.0035027131376]  //Longitude, latitude
+                      [-80.818993, 44.177641], //Longitude, latitude 44.177641188319335, -80.81899374857429
+                      [-80.554260, 44.261003], //Longitude, latitude 44.2610038370053, -80.5542609357485
+                      [-80.571700, 43.998133], //Longitude, latitude 43.99813391662574, -80.57170064193967
+                      [-80.741889, 43.844191],   //Longitude, latitude 43.84419153842094, -80.74188901151742
+                      [-80.988073, 43.973037],  //Longitude, latitude 43.97303767243242, -80.9880736272536
+                      [-81.234409, 44.216492]  //Longitude, latitude 44.2164922363365, -81.23440947720373
                   ]
               };
 
