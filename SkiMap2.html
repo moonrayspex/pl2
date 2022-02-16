@@ -18,6 +18,27 @@ Nordic Ski Map for GTA
           height: 100%;
           width: 100%;
         }
+        /* Style and css adapted from forestpines.github.io */
+        #title{
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        z-index: 5;
+        background-color: rgba(224, 3, 51, 0.417);
+        border-radius: 15px;
+        color: rgb(255, 254, 254);
+        padding: 10px;
+        text-align: left;
+        font-family: 'Kaushan Script'; 
+        line-height: 35px;
+        padding-left: 15px;
+        max-width: 380px;
+      }
+
+      #subtext{
+        line-height: 18px;
+        font-family: 'Outfit';
+      }
       </style>
   
       <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css">
@@ -149,6 +170,12 @@ Nordic Ski Map for GTA
   
     </head>
     <body>
+      <div id="title">
+        <h1>GTA Nordic Ski Locations</h1>
+        <div id="subtext">
+             <p>Get outside and love winter.  Yes, go ahead and get that used/new/borrowed set of skis. It's never a sad day on the trail. Wear a toque and bring snacks.</p>
+        </div>
+      </div>
       <div id="viewDiv"></div>
     </body>
   </html>
