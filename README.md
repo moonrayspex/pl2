@@ -20,3 +20,4 @@ https://acmwekuk3bgjsuzt.maps.arcgis.com/apps/mapviewer/index.html?layers=7dff43
 https://services3.arcgis.com/WadtZ77Zzru92ziy/arcgis/rest/services/Tree_Survey/MapServer?token=<NOT INCLUDED>
 
 <h3>(Valentines) Map</h3>
+https://moonrayspex.github.io/pl2/SkiMap2.html
