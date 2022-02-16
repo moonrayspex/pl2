@@ -11,8 +11,10 @@ https://fleming.maps.arcgis.com/apps/mapviewer/index.html?webmap=6d7f84b77502470
 https://developers.arcgis.com/layers/7dff4360867d4341b95c0918115c70e0/
 
 <h3>ArcGIS Online Items Page</h3>
-https://acmwekuk3bgjsuzt.maps.arcgis.com/home/item.html?id=ddfdeddd47fc475b8ae021f2accd5886
-https://services3.arcgis.com/WadtZ77Zzru92ziy/arcgis/rest/services/Tree_Survey/MapServer
+<h4>back end listing</h4>
+https://acmwekuk3bgjsuzt.maps.arcgis.com/home/item.html?id=7dff4360867d4341b95c0918115c70e0
+<h4>In MapViewer</h4>
+https://acmwekuk3bgjsuzt.maps.arcgis.com/apps/mapviewer/index.html?layers=7dff4360867d4341b95c0918115c70e0
 
 <h3>REST API (without token)</h3>
 https://services3.arcgis.com/WadtZ77Zzru92ziy/arcgis/rest/services/Tree_Survey/MapServer?token=<NOT INCLUDED>
