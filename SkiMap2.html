@@ -4,51 +4,39 @@
   2/15/2022
   Nordic Ski Map for GTA
 -->                                                                                                                                                     
-
 <html>
-<head>
-      <meta name="description" content="DevLab: Configure a popup">
-      <meta charset="utf-8">
-      <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-      <title>Nordic Ski Locations in the GTA</title>
-      <style>
-        html,
-        body,
-        #viewDiv {
-          padding: 0;
-          margin: 0;
-          height: 100%;
-          width: 100%;
-        }
-      </style>
-
-      <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css">
-      <script src="https://js.arcgis.com/4.22/"></script>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <title>Nordic Ski Locations for GTA</title>
     
-    
+        <style>
+            html,
+            body,
+            #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            }
+        </style>
+  
+    <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.22/"></script>
+  
     <script>
-        require([
-            "esri/config",
-            "esri/Map",
-            "esri/views/MapView",
-            "esri/Graphic",
-            "esri/layers/GraphicsLayer",
-            "esri/layers/FeatureLayer"
-        ],
-    
-        function(esriConfig,Map, MapView, Graphic, GraphicsLayer, FeatureLayer) {
-    
-        esriConfig.apiKey = "AAPKc261dba19cf34d67b9d069e8357aab07FlldE0iiMKZ-heFAqiSEASBhG0kVbu6-yFc_HuF7SGsbft_L9p74PPqQX3vbd7zD";
-    
+        require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
+  
+        esriConfig.apiKey =  "AAPKc261dba19cf34d67b9d069e8357aab07FlldE0iiMKZ-heFAqiSEASBhG0kVbu6-yFc_HuF7SGsbft_L9p74PPqQX3vbd7zD";
+  
         const map = new Map({
-            basemap: "arcgis-topographic" //Basemap layer service
+            basemap: "arcgis-topographic" // Basemap layer service
         });
-          
-          //Centre map
+  
         const view = new MapView({
             map: map,
-            center: [43.928951, -79.826755], //Longitude, latitude
-            zoom: 9,
+            center: [43.934, -79.827], // Longitude, latitude  43.934833258944494, -79.82751230251449
+            zoom: 13, // Zoom level
             container: "viewDiv" // Div element
         });
 
