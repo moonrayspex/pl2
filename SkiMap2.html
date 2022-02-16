@@ -5,48 +5,48 @@ Nordic Ski Map for GTA
 -->                                                                                                                                                     
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <title>Nordic Ski Locations for GTA</title>
-    
-        <style>
-            html,
-            body,
-            #viewDiv {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-            }
-        </style>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+      <title>ArcGIS API for JavaScript Tutorials: Display a map</title>
   
-    <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css">
-    <script src="https://js.arcgis.com/4.22/"></script>
+      <style>
+        html,
+        body,
+        #viewDiv {
+          padding: 0;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+        }
+      </style>
   
-    <script>
+      <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css">
+      <script src="https://js.arcgis.com/4.22/"></script>
+  
+      <script>
         require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
   
-        esriConfig.apiKey =  "AAPKc261dba19cf34d67b9d069e8357aab07FlldE0iiMKZ-heFAqiSEASBhG0kVbu6-yFc_HuF7SGsbft_L9p74PPqQX3vbd7zD";
+          esriConfig.apiKey =  "AAPKc261dba19cf34d67b9d069e8357aab07FlldE0iiMKZ-heFAqiSEASBhG0kVbu6-yFc_HuF7SGsbft_L9p74PPqQX3vbd7zD";
   
-        const map = new Map({
+          const map = new Map({
             basemap: "arcgis-topographic" // Basemap layer service
-        });
+          });
   
-        const view = new MapView({
+          const view = new MapView({
             map: map,
-            center: [43.934, -79.827], // Longitude, latitude  43.934833258944494, -79.82751230251449
+            center: [-118.805, 34.027], // Longitude, latitude
             zoom: 13, // Zoom level
             container: "viewDiv" // Div element
+          });
+  
         });
-
-    });
-    </script>
-    
+      </script>
+  
     </head>
     <body>
-        <div id="viewDiv"></div>
+      <div id="viewDiv"></div>
     </body>
-</html>
+  </html>
 
 <!-- 
         // //   Create point and point marker
