@@ -12,12 +12,6 @@ Nordic Ski Map for GTA
       <style>
         html,
         body,
-        #viewDiv {
-          padding: 0;
-          margin: 0;
-          height: 100%;
-          width: 100%;
-        }
         /* Style and css adapted from forestpines.github.io */
         #title{
         position: absolute;
@@ -39,6 +33,12 @@ Nordic Ski Map for GTA
         line-height: 18px;
         font-family: 'Outfit';
       }
+      #viewDiv {
+          padding: 0;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+        }
       </style>
   
       <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css">
@@ -119,11 +119,10 @@ Nordic Ski Map for GTA
         
           const attributes2 = {
               Name: "Hardwood Hills Ski and Bike",
-              // Description: <p><a href="https://www.hardwoodskiandbike.ca/">Hardwood Hills Details</a>  
+               Description:"Excellent" //<p><a href="https://www.hardwoodskiandbike.ca/">Hardwood Hills Details</a>  
               //             <br><a href="https://www.hardwoodskiandbike.ca/cross-country-ski-trail-maps/">Ski Trails Map</a></br>
               //             </p>
-
-          } 
+              } 
           const pointGraphic2 = new Graphic({
               geometry: point2,
               symbol: simpleMarkerSymbol2,
