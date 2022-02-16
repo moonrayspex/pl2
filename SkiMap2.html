@@ -5,8 +5,8 @@
   Nordic Ski Map for GTA
 -->                                                                                                                                                     
 
-    <html>
-    <head>
+<html>
+<head>
       <meta name="description" content="DevLab: Configure a popup">
       <meta charset="utf-8">
       <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -31,13 +31,12 @@
             "esri/config",
             "esri/Map",
             "esri/views/MapView",
-            //"esri/layers/FeatureLayer",
             "esri/Graphic",
-            "esri/layers/GraphicsLayer"
+            "esri/layers/GraphicsLayer",
+            "esri/layers/FeatureLayer"
         ],
     
-        function(esriConfig,Map, MapView, //FeatureLayer
-            Graphic, GraphicsLayer) {
+        function(esriConfig,Map, MapView, Graphic, GraphicsLayer, FeatureLayer) {
     
         esriConfig.apiKey = "AAPKc261dba19cf34d67b9d069e8357aab07FlldE0iiMKZ-heFAqiSEASBhG0kVbu6-yFc_HuF7SGsbft_L9p74PPqQX3vbd7zD";
     
@@ -48,84 +47,104 @@
           //Centre map
         const view = new MapView({
             map: map,
-            center: [43.928951271466154, -79.82675568672752], //Longitude, latitude
+            center: [43.928951, -79.826755], //Longitude, latitude
             zoom: 9,
             container: "viewDiv" // Div element
         });
 
-        //   Create point and point marker
-        const graphicsLayer = new GraphicsLayer();
-            map.add(graphicsLayer);
+        // //   Create point and point marker
+        // const graphicsLayer = new GraphicsLayer();
+        // map.add(graphicsLayer);
 
-            const point = { //Create a point
-                type: "point",
-                longitude: 43.928951271466154,
-                latitude: -79.82675568672752
-            };
-            const simpleMarkerSymbol = {
-                type: "simple-marker",
-                color: [226, 119, 40],  // Orange
-                outline: {
-                    color: [255, 255, 255], // White
-                    width: 1
-                }
-            };
+        // const point = { //Create a point
+        //         type: "point",
+        //         longitude: 43.928951,
+        //         latitude: -79.826755
+        // };
+        // const simpleMarkerSymbol = {
+        //         type: "simple-marker",
+        //         color: [226, 119, 40],  // Orange
+        //         outline: {
+        //         color: [255, 255, 255], // White
+        //         width: 1
+        //         }
+        // };
 
-            //Popup for Point Feature
-            const popupTemplate = {
-                title: "{Name}",
-                content: "{Description}"
-            }
-            const attributes = {
-                Name: "Graphic",
-                Description: "I am a point"
-            }
+        //     //Popup for Point Feature
+        // const popupTemplate = {
+        //         title: "{Name}",
+        //         content: "{Description}"
+        //     }
+        // const attributes = {
+        //         Name: "Albion Hills Conservation Centre",
+        //         Description: "Groomed Trails"
+        //     }
 
-            const pointGraphic = new Graphic({
-                geometry: point,
-                symbol: simpleMarkerSymbol,
-                attributes: attributes,
-                popupTemplate: popupTemplate
-            });
-            graphicsLayer.add(pointGraphic);
+        // const pointGraphic = new Graphic({
+        //     geometry: point,
+        //     symbol: simpleMarkerSymbol,
+        //     attributes: attributes,
+        //     popupTemplate: popupTemplate
+        //     });
+        //     graphicsLayer.add(pointGraphic);
 
 
-             // Create a polygon geometry HEART
-            const polygon = {
-                type: "polygon",
-                rings: [
-                    [-118.818984489994, 34.0137559967283], //Longitude, latitude
-                    [-118.806796597377, 34.0215816298725], //Longitude, latitude
-                    [-118.791432890735, 34.0163883241613], //Longitude, latitude
-                    [-118.79596686535, 34.008564864635],   //Longitude, latitude
-                    [-118.808558110679, 34.0035027131376]  //Longitude, latitude
-                ]
-            };
+        // const point2 = { //Create a second point
+        //     type: "point",
+        //     longitude: 44.517795,
+        //     latitude: 44.517795
+        // };
+       
+        // const attributes2 = {
+        //     Name: "Hardwood Hills Ski and Bike",
+        //     Description: "Excellent groomed trails"
+        // } 
+        // const pointGraphic2 = new Graphic({
+        //     geometry: point2,
+        //     symbol: simpleMarkerSymbol,
+        //     attributes: attributes2,
+        //     popupTemplate: popupTemplate
+        //     });
+        //     graphicsLayer.add(pointGraphic2);
 
-            const simpleFillSymbol = {
-                type: "simple-fill",
-                color: [255, 192, 203, 0.8],  // Pink, opacity 80%
-                outline: {
-                    color: [255, 255, 255],
-                    width: 1
-                }
-            };
 
-            const polygonGraphic = new Graphic({
-                geometry: polygon,
-                symbol: simpleFillSymbol,
 
-                attributes: attributes,
+        //      // Create a polygon geometry HEART
+        //     const polygon = {
+        //         type: "polygon",
+        //         rings: [
+        //             [-118.818984489994, 34.0137559967283], //Longitude, latitude
+        //             [-118.806796597377, 34.0215816298725], //Longitude, latitude
+        //             [-118.791432890735, 34.0163883241613], //Longitude, latitude
+        //             [-118.79596686535, 34.008564864635],   //Longitude, latitude
+        //             [-118.808558110679, 34.0035027131376]  //Longitude, latitude
+        //         ]
+        //     };
 
-            });
-            graphicsLayer.add(polygonGraphic);
-            //End of Point and Polygon graphics
+        //     const simpleFillSymbol = {
+        //         type: "simple-fill",
+        //         color: [255, 192, 203, 0.8],  // Pink, opacity 80%
+        //         outline: {
+        //             color: [255, 255, 255],
+        //             width: 1
+        //         }
+        //     };
+
+        //     const polygonGraphic = new Graphic({
+        //         geometry: polygon,
+        //         symbol: simpleFillSymbol,
+
+        //         attributes: attributes,
+
+        //     });
+        //     graphicsLayer.add(polygonGraphic);
+        //     //End of Point and Polygon graphics
     
         });
     </script>
     
     </head>
     <body>
-      <div id="viewDiv"></div>
+        <div id="viewDiv"></div>
     </body>
 </html>
