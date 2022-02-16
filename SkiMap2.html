@@ -77,12 +77,13 @@
             }
             const attributes = {
                 Name: "Graphic",
-                Description: "I am a polygon"
+                Description: "I am a point"
             }
 
             const pointGraphic = new Graphic({
                 geometry: point,
                 symbol: simpleMarkerSymbol,
+                attributes: attributes,
                 popupTemplate: popupTemplate
             });
             graphicsLayer.add(pointGraphic);
@@ -118,114 +119,9 @@
             });
             graphicsLayer.add(polygonGraphic);
             //End of Point and Polygon graphics
-
-
-
-
-
-        //   //Modified from template
-        //   // Define a pop-up for SkiLocations
-        //   const popupSkiLocation = {
-        //     "title": "Ski Location",
-        //     "content": "<b>Name:</b> {SKI_NAME}<br><b>City:</b> {CITY_JUR}<br><b>Address:</b> {X_STREET}<br><b>Parking:</b> {WEBSITE}<br><b>Trail Length:</b> {SKI_KMS} kms"
-        //   }
     
-        // const skilocation = new FeatureLayer({
-        //     url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads_Styled/FeatureServer/0",
-        //     outFields: ["SKI_NAME","CITY_JUR","X_STREET","WEBSITE","SKI_KMS"],
-        //     popupTemplate: popupSkiLocation
-        //   });
-    
-        //   map.add(skilocation);
-    
-
-
-          // Define a popup for Trails
-        //   const popupSkiLocation = {
-        //     title: "Trail Information",
-        //     content: [{
-        //      type: "media",
-        //       mediaInfos: [{
-        //         type: "column-chart",
-        //         caption: "",
-        //         value: {
-        //           fields: [ "ELEV_MIN","ELEV_MAX" ],
-        //           normalizeField: null,
-        //           tooltipField: "Min and max elevation values"
-        //           }
-        //         }]
-        //     }]
-        //   }
-    
-        //   const trails = new FeatureLayer({
-        //     url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trails_Styled/FeatureServer/0",
-        //     outFields: ["TRL_NAME","ELEV_GAIN"],
-        //     popupTemplate: popupTrails
-        //   });
-    
-        //   map.add(trails,0);
-    
-        //   // Define popup for Parks and Open Spaces
-        //   const popupOpenspaces = {
-        //     "title": "{PARK_NAME}",
-        //     "content": [{
-        //       "type": "fields",
-        //       "fieldInfos": [
-        //         {
-        //           "fieldName": "AGNCY_NAME",
-        //           "label": "Agency",
-        //           "isEditable": true,
-        //           "tooltip": "",
-        //           "visible": true,
-        //           "format": null,
-        //           "stringFieldOption": "text-box"
-        //         },
-        //         {
-        //           "fieldName": "TYPE",
-        //           "label": "Type",
-        //           "isEditable": true,
-        //           "tooltip": "",
-        //           "visible": true,
-        //           "format": null,
-        //           "stringFieldOption": "text-box"
-        //         },
-        //         {
-        //           "fieldName": "ACCESS_TYP",
-        //           "label": "Access",
-        //           "isEditable": true,
-        //           "tooltip": "",
-        //           "visible": true,
-        //           "format": null,
-        //           "stringFieldOption": "text-box"
-        //         },
-    
-        //         {
-        //           "fieldName": "GIS_ACRES",
-        //           "label": "Acres",
-        //           "isEditable": true,
-        //           "tooltip": "",
-        //           "visible": true,
-        //           "format": {
-        //             "places": 2,
-        //             "digitSeparator": true
-        //           },
-    
-        //           "stringFieldOption": "text-box"
-        //         }
-        //       ]
-        //     }]
-        //   }
-    
-        //   const openspaces = new FeatureLayer({
-        //     url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Parks_and_Open_Space_Styled/FeatureServer/0",
-        //     outFields: ["TYPE","PARK_NAME", "AGNCY_NAME","ACCESS_TYP","GIS_ACRES","TRLS_MI","TOTAL_GOOD","TOTAL_FAIR", "TOTAL_POOR"],
-        //     popupTemplate: popupOpenspaces
-        //   });
-    
-        //   map.add(openspaces,0);
-    
-        });
-      </script>
+    });
+    </script>
     
     </head>
     <body>
