@@ -25,17 +25,15 @@
       <script src="https://js.arcgis.com/4.22/"></script>
     </head>
     
-     <script>
+    <script>
     
       require([
-          "esri/config",
-          "esri/Map",
+          "esri/config","esri/Map", 
           "esri/views/MapView",
-    
+          "esri/Graphic",
+          "esri/layers/GraphicsLayer",
           "esri/layers/FeatureLayer"
-        ],
-    
-        function(esriConfig,Map, MapView, FeatureLayer){
+          ], function (esriConfig,Map, MapView, Graphic, GraphicsLayer, FeatureLayer) {
     
          esriConfig.apiKey = "AAPKc261dba19cf34d67b9d069e8357aab07FlldE0iiMKZ-heFAqiSEASBhG0kVbu6-yFc_HuF7SGsbft_L9p74PPqQX3vbd7zD";
     
