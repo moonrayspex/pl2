@@ -125,20 +125,20 @@
 
 
 
-          //Modified from template
-          // Define a pop-up for SkiLocations
-          const popupSkiLocation = {
-            "title": "Ski Location",
-            "content": "<b>Name:</b> {SKI_NAME}<br><b>City:</b> {CITY_JUR}<br><b>Address:</b> {X_STREET}<br><b>Parking:</b> {WEBSITE}<br><b>Trail Length:</b> {SKI_KMS} kms"
-          }
+        //   //Modified from template
+        //   // Define a pop-up for SkiLocations
+        //   const popupSkiLocation = {
+        //     "title": "Ski Location",
+        //     "content": "<b>Name:</b> {SKI_NAME}<br><b>City:</b> {CITY_JUR}<br><b>Address:</b> {X_STREET}<br><b>Parking:</b> {WEBSITE}<br><b>Trail Length:</b> {SKI_KMS} kms"
+        //   }
     
-        const skilocation = new FeatureLayer({
-            url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads_Styled/FeatureServer/0",
-            outFields: ["SKI_NAME","CITY_JUR","X_STREET","WEBSITE","SKI_KMS"],
-            popupTemplate: popupSkiLocation
-          });
+        // const skilocation = new FeatureLayer({
+        //     url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads_Styled/FeatureServer/0",
+        //     outFields: ["SKI_NAME","CITY_JUR","X_STREET","WEBSITE","SKI_KMS"],
+        //     popupTemplate: popupSkiLocation
+        //   });
     
-          map.add(skilocation);
+        //   map.add(skilocation);
     
 
 
