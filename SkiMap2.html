@@ -26,34 +26,35 @@
       <script src="https://js.arcgis.com/4.22/"></script>
     
     
-     <script>
-      require([
-          "esri/config",
-          "esri/Map",
-          "esri/views/MapView",
-          "esri/layers/FeatureLayer",
-          "esri/Graphic",
-          "esri/layers/GraphicsLayer"
+    <script>
+        require([
+            "esri/config",
+            "esri/Map",
+            "esri/views/MapView",
+            //"esri/layers/FeatureLayer",
+            "esri/Graphic",
+            "esri/layers/GraphicsLayer"
         ],
     
-        function(esriConfig,Map, MapView, FeatureLayer, Graphic, GraphicsLayer) {
+        function(esriConfig,Map, MapView, //FeatureLayer
+            Graphic, GraphicsLayer) {
     
-         esriConfig.apiKey = "AAPKc261dba19cf34d67b9d069e8357aab07FlldE0iiMKZ-heFAqiSEASBhG0kVbu6-yFc_HuF7SGsbft_L9p74PPqQX3vbd7zD";
+        esriConfig.apiKey = "AAPKc261dba19cf34d67b9d069e8357aab07FlldE0iiMKZ-heFAqiSEASBhG0kVbu6-yFc_HuF7SGsbft_L9p74PPqQX3vbd7zD";
     
-          const map = new Map({
+        const map = new Map({
             basemap: "arcgis-topographic" //Basemap layer service
-          });
+        });
           
           //Centre map
-          const view = new MapView({
-            container: "viewDiv",
+        const view = new MapView({
             map: map,
             center: [43.928951271466154, -79.82675568672752], //Longitude, latitude
-            zoom: 9
-          });
+            zoom: 9,
+            container: "viewDiv" // Div element
+        });
 
         //   Create point and point marker
-          const graphicsLayer = new GraphicsLayer();
+        const graphicsLayer = new GraphicsLayer();
             map.add(graphicsLayer);
 
             const point = { //Create a point
@@ -120,7 +121,7 @@
             graphicsLayer.add(polygonGraphic);
             //End of Point and Polygon graphics
     
-    });
+        });
     </script>
     
     </head>
